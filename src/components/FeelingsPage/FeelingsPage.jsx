@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 
 function FeelingsPage() {
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     
     // axios GET all feelings
 function getfeelings() {
