@@ -27,12 +27,12 @@ function UnderstandingPage() {
     
     return (
         <form onSubmit={handleUnderstandSubmit}>
-            <p>How well did you understand today?</p>
-            <input type="radio" name="understandNumber" value="1" onChange={(event) => setUnderstanding(event.target.value)} />
-            <input type="radio" name="understandNumber" value="2" onChange={(event) => setUnderstanding(event.target.value)} />
-            <input type="radio" name="understandNumber" value="3" onChange={(event) => setUnderstanding(event.target.value)} />
-            <input type="radio" name="understandNumber" value="4" onChange={(event) => setUnderstanding(event.target.value)} />
-            <input type="radio" name="understandNumber" value="5" onChange={(event) => setUnderstanding(event.target.value)} />
+            <p>How well did you understand today? 1=Lost - 5=I can now teach it!</p>
+            <input type="radio" name="understandNumber" value="1" onChange={(event) => setUnderstanding(event.target.value)} />1
+            <input type="radio" name="understandNumber" value="2" onChange={(event) => setUnderstanding(event.target.value)} />2
+            <input type="radio" name="understandNumber" value="3" onChange={(event) => setUnderstanding(event.target.value)} />3
+            <input type="radio" name="understandNumber" value="4" onChange={(event) => setUnderstanding(event.target.value)} />4
+            <input type="radio" name="understandNumber" value="5" onChange={(event) => setUnderstanding(event.target.value)} />5
             <button type="submit" >Next</button>
         </form>
 

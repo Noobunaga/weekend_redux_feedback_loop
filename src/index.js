@@ -9,15 +9,6 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-// Test data for order
-// const feedback = {
-//     feeling: '',
-//     understanding: '',
-//     support: '',
-//     comments: '',
-// }
-
-// const initialState = {}
 
 // Reducer to keep order in global state
 const feelingsReducer = (state = [], action) => {
