@@ -8,6 +8,11 @@ import { useDispatch } from 'react-redux';
 function FeelingsPage() {
 
     // const dispatch = useDispatch();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('On to Understanding Next');
+    }; 
     
     // axios GET all feelings
 function getfeelings() {
@@ -26,17 +31,19 @@ function getfeelings() {
  
     
     return (
-        <div classname="App">
-            <p>How are you feelings today?</p>
+        <div className="App">
+            <p>How are your feelings today?</p>
             <table>
-                <th>
+                <thead>
                     <tr>
-                        <th>Input</th>
+                        <td>Input</td>
                     </tr>
-
-                </th>
+                </thead>
                 {/* <StufftoADD/> */}
             </table>
+            <section className="feelings-next">
+                <button type="submit" onClick={handleSubmit} >Next</button>
+            </section>
         </div>
 
     );
