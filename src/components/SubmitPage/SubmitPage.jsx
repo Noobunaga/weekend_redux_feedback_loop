@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { HashRouter as Router, useHistory, } from "react-router-dom";
 
@@ -8,6 +8,7 @@ import './SubmitPage.css';
 
 function SubmitPage() {
 
+    const dispatch = useDispatch();
     const history = useHistory();
     const feelingsReducer = useSelector((store) => store.feelingsReducer);
     const understandingReducer = useSelector((store) => store.understandingReducer);
