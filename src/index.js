@@ -37,10 +37,19 @@ const understandingReducer = (state = [], action) => {
     return state;
 };
 
+const supportReducer = (state = [], action) => {
+    if(action.type === "ADD_NEW_SUPPORT") {
+        console.log(`Support is picked is ${action.payload}`);
+        return action.payload;
+    }
+    return state;
+};
+
 const storeInstance = createStore(
     combineReducers({
         feelingsReducer,
         understandingReducer,
+        supportReducer,
     }),
     applyMiddleware(logger)
 );

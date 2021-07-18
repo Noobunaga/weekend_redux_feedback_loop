@@ -5,6 +5,7 @@ import './App.css';
 
 import FeelingsPage from '../FeelingsPage/FeelingsPage';
 import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
+import SupportPage from '../SupportPage/SupportPage';
 
 function App() {
 
@@ -21,10 +22,10 @@ function App() {
         <Route path="/understanding" exact>
           <UnderstandingPage />
         </Route>
-        {/* <Route path="/support" exact>
+        <Route path="/support" exact>
           <SupportPage />
         </Route>
-        <Route path="/comments" exact>
+        {/* <Route path="/comments" exact>
           <CommentsPage />
         </Route> */}
       </div>
