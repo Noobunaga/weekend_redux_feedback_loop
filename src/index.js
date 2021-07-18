@@ -45,11 +45,20 @@ const supportReducer = (state = [], action) => {
     return state;
 };
 
+const commentsReducer = (state = [], action) => {
+    if(action.type === "ADD_NEW_COMMENTS") {
+        console.log(`Comment is left is ${action.payload}`);
+        return action.payload;
+    }
+    return state;
+};
+
 const storeInstance = createStore(
     combineReducers({
         feelingsReducer,
         understandingReducer,
         supportReducer,
+        commentsReducer,
     }),
     applyMiddleware(logger)
 );

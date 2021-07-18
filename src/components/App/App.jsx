@@ -6,6 +6,7 @@ import './App.css';
 import FeelingsPage from '../FeelingsPage/FeelingsPage';
 import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 import SupportPage from '../SupportPage/SupportPage';
+import CommentsPage from '../CommentsPage/CommentsPage';
 
 function App() {
 
@@ -25,9 +26,9 @@ function App() {
         <Route path="/support" exact>
           <SupportPage />
         </Route>
-        {/* <Route path="/comments" exact>
+        <Route path="/comments" exact>
           <CommentsPage />
-        </Route> */}
+        </Route>
       </div>
     </Router>
   );
