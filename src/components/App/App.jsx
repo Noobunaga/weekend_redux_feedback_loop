@@ -7,6 +7,7 @@ import FeelingsPage from '../FeelingsPage/FeelingsPage';
 import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 import SupportPage from '../SupportPage/SupportPage';
 import CommentsPage from '../CommentsPage/CommentsPage';
+import SubmitPage from '../SubmitPage/SubmitPage';
 
 function App() {
 
@@ -29,6 +30,12 @@ function App() {
         <Route path="/comments" exact>
           <CommentsPage />
         </Route>
+        <Route path="/submit" exact>
+          <SubmitPage />
+        </Route>
+        {/* <Route path="/thanks" exact>
+          <ThankYouPage />
+        </Route> */}
       </div>
     </Router>
   );

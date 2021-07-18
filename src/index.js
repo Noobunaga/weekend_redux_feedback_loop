@@ -4,19 +4,18 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-
 // import redux
 import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 // Test data for order
-const feedback = {
-    feeling: '',
-    understanding: '',
-    support: '',
-    comments: '',
-}
+// const feedback = {
+//     feeling: '',
+//     understanding: '',
+//     support: '',
+//     comments: '',
+// }
 
 // const initialState = {}
 
