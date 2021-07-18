@@ -46,7 +46,15 @@ const supportReducer = (state = [], action) => {
 
 const commentsReducer = (state = [], action) => {
     if(action.type === "ADD_NEW_COMMENTS") {
-        console.log(`Comment is left is ${action.payload}`);
+        console.log(`Comment left is ${action.payload}`);
+        return action.payload;
+    }
+    return state;
+};
+
+const thanksReducer = (state = [], action) => {
+    if(action.type === "ADD_NEW_FEEDBACK") {
+        console.log(`Thanks for leaving ${action.payload}`);
         return action.payload;
     }
     return state;
@@ -58,6 +66,7 @@ const storeInstance = createStore(
         understandingReducer,
         supportReducer,
         commentsReducer,
+        thanksReducer,
     }),
     applyMiddleware(logger)
 );
