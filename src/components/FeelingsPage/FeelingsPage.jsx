@@ -2,20 +2,21 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 
 
 
 function FeelingsPage() {
     const history = useHistory();
-    const [feelings, setFeelings] = useState('');
     const dispatch = useDispatch();
+    const [feelings, setFeelings] = useState('');
+
     
 
-    const handleSubmit = (event) => {
+    const handleFeelingSubmit = (event) => {
         event.preventDefault();
         console.log('On to Understanding Next');
-        dispatch:({
+        dispatch({
             type: 'ADD_NEW_FEELINGS',
             payload: feelings,
         });
@@ -28,7 +29,11 @@ function FeelingsPage() {
         <form onSubmit={handleFeelingSubmit}>
             <p>How are your feelings today?</p>
             <input type="radio" name="feelingsNumber" value="1" onChange={(event) => setFeelings(event.target.value)} />
-            <button type="submit" onClick={handleSubmit} >Next</button>
+            <input type="radio" name="feelingsNumber" value="2" onChange={(event) => setFeelings(event.target.value)} />
+            <input type="radio" name="feelingsNumber" value="3" onChange={(event) => setFeelings(event.target.value)} />
+            <input type="radio" name="feelingsNumber" value="4" onChange={(event) => setFeelings(event.target.value)} />
+            <input type="radio" name="feelingsNumber" value="5" onChange={(event) => setFeelings(event.target.value)} />
+            <button type="submit" >Next</button>
         </form>
 
     );
