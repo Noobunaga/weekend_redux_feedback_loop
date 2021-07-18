@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 import FeelingsPage from '../FeelingsPage/FeelingsPage';
+import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 
 function App() {
 
@@ -17,6 +18,15 @@ function App() {
         <Route path="/" exact>
           <FeelingsPage />
         </Route>
+        <Route path="/understanding" exact>
+          <UnderstandingPage />
+        </Route>
+        {/* <Route path="/support" exact>
+          <SupportPage />
+        </Route>
+        <Route path="/comments" exact>
+          <CommentsPage />
+        </Route> */}
       </div>
     </Router>
   );
